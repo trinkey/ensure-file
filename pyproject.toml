@@ -1,0 +1,18 @@
+[project]
+name = "ensure_file"
+version = "1.0.0"
+authors = [
+  { name="Hazel", email="trinkey@duck.com" },
+]
+description = "An easy way to manage file creation."
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU Affero General Public License v3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/trinkey/ensure-file"
+Issues = "https://github.com/trinkey/ensure-file/issues"
