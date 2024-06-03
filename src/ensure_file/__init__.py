@@ -1,9 +1,10 @@
 import os
+import pathlib
 
 from typing import Union
 
 def ensure_file(
-    path: Union[str, bytes], *,
+    path: Union[str, bytes, pathlib.Path], *,
     folder: bool = False,
     default_value: Union[str, bytes] = b"",
     auto_correct_type: bool = True,
@@ -23,25 +24,25 @@ def ensure_file(
 
     # Type checking
     if isinstance(path, bytes):
-        path: str = bytes.decode(path)
+        path = bytes.decode(path)
     if not isinstance(path, str):
         raise TypeError(f"'path' should be str or bytes, not {type(path)}")
     if not isinstance(folder, bool):
-        folder: bool = bool(folder)
+        folder = bool(folder)
     if isinstance(default_value, str):
-        default_value: bytes = str.encode(default_value)
+        default_value = str.encode(default_value)
     if not isinstance(default_value, bytes):
-        default_value: bytes = str.encode(str(default_value))
+        default_value = str.encode(str(default_value))
     if not isinstance(auto_correct_type, bool):
-        auto_correct_type: bool = bool(auto_correct_type)
+        auto_correct_type = bool(auto_correct_type)
     if not isinstance(throw_error, bool):
-        throw_error: bool = bool(throw_error)
+        throw_error = bool(throw_error)
     if not isinstance(throw_check_type, bool):
-        throw_check_type: bool = bool(throw_check_type)
+        throw_check_type = bool(throw_check_type)
 
     # Expand the user part of a path
     if path and path[0] == "~":
-        path: str = os.path.expanduser(path)
+        path = os.path.expanduser(path)
 
     # Throws the errors if needed
     if throw_error:

@@ -1,6 +1,6 @@
 [project]
 name = "ensure_file"
-version = "1.0.0"
+version = "1.1.1"
 authors = [
   { name="Hazel", email="trinkey@duck.com" },
 ]
