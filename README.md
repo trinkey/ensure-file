@@ -1,3 +1,6 @@
+> [!NOTE]  
+> This repository has been **migrated** to [git.gay](https://git.gay/trinkey/ensure-file). The Github version will **no longer be maintained**.
+
 # Ensure File
 An easy way to manage file creation
 
